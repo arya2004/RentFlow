@@ -1,100 +1,127 @@
-# Real Estate Rental and Tenant Management System - Property Plus
 
-Property Plus is a real estate rental and tenant management system. It is a web application that allows two types of users to use the application. The two types of users are the owner and the tenant. The owner can post a property for rent, manage tenants, register rent payment, and create a property contract. The tenant can search and filter properties, view property details, send an email to the owner of the property, and use the built-in chat application for communication between the owner and the tenant.
+# RentFlow
 
-Live Site - [Property Plus](https://property-plus.onrender.com/)
+**RentFlow** is a modern web application for real estate rental and tenant management. It allows property owners to manage rental listings, tenant interactions, rent payments, and contracts, while providing tenants with an easy way to find and communicate about properties.
 
-## Features
+This project is a **fork of [Property Plus](https://github.com/SonamRinzinGurung/Real-Estate-Rental-and-Tenant-Management-System)** by [Sonam Rinzin Gurung](https://github.com/SonamRinzinGurung).
+**Credit and thanks** to the original author for the base implementation. This fork includes additional changes and improvements maintained by [@arya2004](https://github.com/arya2004).
 
-- Post a property for rent
-- Search and filter properties
-- View property details
-- Built-in Chat Application for communication between owner and tenant
-- Secure JWT authentication using access and refresh tokens
-- Send emails between owner and tenant
-- Create Property Contract
-- Manage tenants
-- Register Rent Payment
+---
 
-## Configuration and Installation Instructions
+
+## ✨ Features
+
+* Post and manage rental properties
+* Search and filter properties by criteria
+* View detailed property listings
+* Secure JWT authentication (owner and tenant roles)
+* Built-in real-time chat between owners and tenants
+* Email communication between owners and tenants
+* Digital property contract creation
+* Tenant management system
+* Rent payment tracking and logging
+
+---
+
+## 🚀 Tech Stack
+
+* **Frontend**: React.js, Vite
+* **Backend**: Node.js, Express.js
+* **Database**: MongoDB
+* **Media Storage**: Cloudinary
+* **Email**: Gmail + Ethereal for testing
+* **Authentication**: JWT (Access & Refresh tokens)
+
+---
+
+## ⚙️ Installation & Setup
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/en/download/)
-- [React.js](https://facebook.github.io/react/)
-- [npm](https://www.npmjs.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [Cloudinary](https://cloudinary.com/)
-- [Ethereal Email](https://ethereal.email/)
+* Node.js
+* npm
+* MongoDB (local or cloud)
+* Cloudinary account
+* Gmail account (or use Ethereal for test emails)
 
-1. Clone the repository:
+### 1. Clone the Repository
 
 ```bash
-$ git clone https://github.com/SonamRinzinGurung/Real-Estate-Rental-and-Tenant-Management-System.git
+git clone https://github.com/arya2004/rentflow.git
+cd rentflow
 ```
 
-2. Install the required packages for the backend:
+### 2. Install Backend Dependencies
 
 ```bash
-$ cd server
-$ npm install
+cd server
+npm install
 ```
 
-3. Open a new terminal session and install the required packages for the frontend:
+### 3. Install Frontend Dependencies
 
 ```bash
-$ cd client
-$ npm install
+cd ../client
+npm install
 ```
 
-4. Configure the environment variables inside the server folder:
+### 4. Configure Environment Variables
 
-```bash
+#### In `server/.env`
 
-- create a .env file and add the following variables:
-- generate secret keys for jwt tokens using online tools
-
-MONGO_URI= <your_mongo_uri>
-ACCESS_TOKEN_SECRET_OWNER= <your_access_token_secret_owner>
-ACCESS_TOKEN_SECRET_TENANT= <your_access_token_secret_tenant>
-REFRESH_TOKEN_SECRET_OWNER= <your_refresh_token_secret_owner>
-REFRESH_TOKEN_SECRET_TENANT= <your_refresh_token_secret_tenant>
+```env
+MONGO_URI=<your_mongo_uri>
+ACCESS_TOKEN_SECRET_OWNER=<your_access_token_secret_owner>
+ACCESS_TOKEN_SECRET_TENANT=<your_access_token_secret_tenant>
+REFRESH_TOKEN_SECRET_OWNER=<your_refresh_token_secret_owner>
+REFRESH_TOKEN_SECRET_TENANT=<your_refresh_token_secret_tenant>
 ACCESS_LIFETIME=15m
 REFRESH_LIFETIME=7d
 CLOUDINARY_CLOUD_NAME=<your_cloudinary_cloud_name>
-CLOUDINARY_API_KEY= <your_cloudinary_api_key>
-CLOUDINARY_API_SECRET= <your_cloudinary_api_secret>
-RESET_PASSWORD_KEY= <your_reset_password_key>
-EMAIL_VERIFICATION_KEY= <your_email_verification_key>
+CLOUDINARY_API_KEY=<your_cloudinary_api_key>
+CLOUDINARY_API_SECRET=<your_cloudinary_api_secret>
+RESET_PASSWORD_KEY=<your_reset_password_key>
+EMAIL_VERIFICATION_KEY=<your_email_verification_key>
 CLIENT_URL=http://localhost:3000
 EMAIL_HOST=smtp.gmail.com
 EMAIL_PORT=587
-EMAIL_USER= <your_gmail_address>
-EMAIL_PASS= <your_gmail_pass> or <your_gmail_app_password>
+EMAIL_USER=<your_gmail_address>
+EMAIL_PASS=<your_gmail_app_password>
 ```
 
-5. Configure the environment variables inside the client folder:
+#### In `client/.env.local`
 
-```bash
-
-- create a .env.local file and add the following variables:
-
+```env
 VITE_APP_BASE_URL=http://localhost:3000
 VITE_APP_API_URL=http://localhost:5000/api
 VITE_APP_API_HOST=http://localhost:5000
 ```
 
-6. Run the application:
+### 5. Run the Application
+
+#### Start Backend
 
 ```bash
-$ cd server
-$ npm run dev
+cd server
+npm start
 ```
-*** 
-### Author
 
-[Sonam Rinzin Gurung](https://www.linkedin.com/in/sonam-rinzin-gurung-59060b211/)
+#### Start Frontend (in a new terminal)
 
-### Repository
+```bash
+cd client
+npm start
+```
 
-[Property Plus](https://github.com/SonamRinzinGurung/Real-Estate-Rental-and-Tenant-Management-System)
+---
+
+## 👤 Author
+
+* Fork maintained by [@arya2004](https://github.com/arya2004)
+* Original Author: [Sonam Rinzin Gurung](https://github.com/SonamRinzinGurung)
+
+---
+
+## 📄 License
+
+This project is open-source. Please review the original license in the source repository if you plan to distribute it.
