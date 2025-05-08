@@ -4,96 +4,137 @@ import { Link } from "react-router-dom";
 
 const PrivacyComponent = () => {
   return (
-    <div className="flex flex-col items-center mx-auto w-3/4 mb-12">
-      <h2 className="font-heading font-bold mt-8 uppercase">
-        Privacy Policies
+    <div className="w-full bg-gradient-to-br from-white via-slate-50 to-slate-100 py-12 px-4 md:px-20">
+      <h2 className="text-3xl font-extrabold text-center text-slate-800 uppercase mb-10 font-heading tracking-wide">
+        Privacy Policy
       </h2>
-      <div className="">
-        <div className="mt-6">
-          <p>
-            At Corazon Homes, we collect, use, and share personal data in accordance with applicable privacy laws to protect your rights. This Privacy Policy describes what data we gather, why we need it, and how we keep it secure across all our services—from property search and consultation to loan processing and after-sales support.
-          </p>
-        </div>
 
-        <div className="mt-6">
-          <h4 className="font-bold">Data Collection</h4>
+      <div className="max-w-5xl mx-auto space-y-12 text-gray-700 leading-relaxed text-base">
+        <section>
           <p>
-            We collect personal information such as your name, email address, phone number, and address. When you use our platform to:
+            At Corazon Homes, we collect, use, and share personal data in
+            accordance with privacy laws. This policy explains what data we
+            gather, why it’s needed, and how we protect it—across services from
+            property search to loan processing.
           </p>
-          <ul className="list-disc list-inside mt-2">
+        </section>
+
+        <section>
+          <h4 className="text-xl font-semibold text-indigo-700 mb-2">
+            Data Collection
+          </h4>
+          <p>
+            We collect details like name, email, phone number, and address when
+            you:
+          </p>
+          <ul className="list-disc list-inside mt-2 space-y-1">
             <li>Browse or shortlist properties</li>
-            <li>Request site visits or consultation</li>
+            <li>Request site visits or consultations</li>
             <li>Apply for home or commercial loans</li>
-            <li>Register for after-sales updates</li>
-            <li>Access NRI services</li>
+            <li>Register for after-sales services</li>
+            <li>Use our NRI support features</li>
           </ul>
-        </div>
+        </section>
 
-        <div className="mt-6">
-          <h4 className="font-bold">Use of Data</h4>
-          <p>
-            Collected data powers our core features:
-          </p>
-          <ul className="list-disc list-inside mt-2">
-            <li><strong>Consultation:</strong> Matching you with vetted professionals and scheduling site visits.</li>
-            <li><strong>After Sales:</strong> Sending progress reports, photos, and market insights.</li>
-            <li><strong>Home Loans:</strong> Facilitating multiple bank options and due diligence.</li>
-            <li><strong>Property Management:</strong> Coordinating finance, legal, interiors, leasing, and resale.</li>
-            <li><strong>NRI Corner:</strong> Guiding Non-Resident Indians through RERA-compliant investments and registrations.</li>
+        <section>
+          <h4 className="text-xl font-semibold text-indigo-700 mb-2">
+            Use of Data
+          </h4>
+          <p>We use your data to power core services, such as:</p>
+          <ul className="list-disc list-inside mt-2 space-y-1">
+            <li>
+              <strong>Consultation:</strong> Schedule visits and match you with
+              professionals.
+            </li>
+            <li>
+              <strong>After Sales:</strong> Share updates, photos, and insights.
+            </li>
+            <li>
+              <strong>Loans:</strong> Assist with lender comparison and
+              application processing.
+            </li>
+            <li>
+              <strong>Management:</strong> Coordinate resale, interiors, and
+              legal support.
+            </li>
+            <li>
+              <strong>NRI Services:</strong> Offer RERA-compliant guidance and
+              registrations.
+            </li>
           </ul>
-        </div>
+        </section>
 
-        <div className="mt-6">
-          <h4 className="font-bold">Data Sharing</h4>
-          <p>
-            We do not sell or rent your personal data. We share necessary information only with:
-          </p>
-          <ul className="list-disc list-inside mt-2">
-            <li>Our network of consultants, lenders, and legal partners</li>
-            <li>Cloudinary, for secure media storage</li>
-            <li>Email providers (e.g., Gmail/Ethereal) strictly to send notifications</li>
-          </ul>
-          <p className="mt-2">
-            Any third-party partner receives data only to fulfill the service you requested, and under strict confidentiality agreements.
-          </p>
-        </div>
-
-        <div className="mt-6">
-          <h4 className="font-bold">Security</h4>
-          <p>
-            We implement industry-standard safeguards—SSL/TLS, JWT authentication with access and refresh tokens, and encrypted environment variables—to protect your data against unauthorized access or alteration.
-          </p>
-        </div>
-
-        <div className="mt-6">
-          <h4 className="font-bold">Data Retention</h4>
-          <p>
-            We retain your personal data only as long as necessary to provide our services, comply with legal obligations, and resolve disputes. When data is no longer needed, it is securely deleted or anonymized.
-          </p>
-        </div>
-
-        <div className="mt-6">
-          <h4 className="font-bold">User Rights</h4>
-          <p>
-            You have the right to:
-          </p>
-          <ul className="list-disc list-inside mt-2">
-            <li>Access your personal information</li>
-            <li>Correct or update inaccurate data</li>
-            <li>Request deletion of your account and data</li>
-            <li>Withdraw consent at any time (for marketing communications)</li>
+        <section>
+          <h4 className="text-xl font-semibold text-indigo-700 mb-2">
+            Data Sharing
+          </h4>
+          <p>We never sell or rent your data. We only share with:</p>
+          <ul className="list-disc list-inside mt-2 space-y-1">
+            <li>Our verified consultants and legal partners</li>
+            <li>Cloudinary for secure image storage</li>
+            <li>
+              Email services (e.g., Gmail, Ethereal) for transactional messages
+            </li>
           </ul>
           <p className="mt-2">
-            To exercise any of these rights, please contact us at <a href="mailto:sales@corazonhomes.com" className="text-blue-600 hover:underline">sales@corazonhomes.com</a>.
+            Third parties access only what's needed for your request, under
+            strict agreements.
           </p>
-        </div>
+        </section>
 
-        <div className="mt-6">
-          <h4 className="font-bold">Changes to Policy</h4>
+        <section>
+          <h4 className="text-xl font-semibold text-indigo-700 mb-2">
+            Security
+          </h4>
           <p>
-            We may update this Privacy Policy to reflect changes in our practices or legal requirements. When significant changes occur, we will notify you by email and post an announcement on our website with the revision date.
+            Your data is protected via SSL/TLS encryption, secure JWT-based
+            login, and private environment variables to ensure safe transmission
+            and storage.
           </p>
-        </div>
+        </section>
+
+        <section>
+          <h4 className="text-xl font-semibold text-indigo-700 mb-2">
+            Data Retention
+          </h4>
+          <p>
+            We retain your data only as long as required for legal or
+            service-related purposes. After that, it’s securely erased or
+            anonymized.
+          </p>
+        </section>
+
+        <section>
+          <h4 className="text-xl font-semibold text-indigo-700 mb-2">
+            Your Rights
+          </h4>
+          <p>You can:</p>
+          <ul className="list-disc list-inside mt-2 space-y-1">
+            <li>Access or correct your data</li>
+            <li>Request deletion of your account</li>
+            <li>Withdraw marketing consent anytime</li>
+          </ul>
+          <p className="mt-2">
+            Contact us at{" "}
+            <a
+              href="mailto:sales@corazonhomes.com"
+              className="text-blue-600 hover:underline"
+            >
+              sales@corazonhomes.com
+            </a>{" "}
+            to exercise your rights.
+          </p>
+        </section>
+
+        <section>
+          <h4 className="text-xl font-semibold text-indigo-700 mb-2">
+            Policy Updates
+          </h4>
+          <p>
+            We may revise this policy as needed. Major changes will be announced
+            via email and website banners with the effective date.
+          </p>
+        </section>
       </div>
     </div>
   );
@@ -104,56 +145,67 @@ const PrivacyPoliciesPage = () => {
 
   if (!user) {
     return (
-      <div>
-        <header className="flex m-1 shadow-sm">
-          <Logo />
-          <div className="flex flex-col justify-center ml-2">
-            <h5 className="font-display">Corazon Homes</h5>
-            <p className="hidden text-xs md:block md:text-sm">
-              Find and Manage your rentals in one place
-            </p>
+      <div className="min-h-screen flex flex-col bg-white">
+        {/* Header */}
+        <header className="flex items-center justify-between shadow-sm px-6 py-4 bg-white">
+          <div className="flex items-center gap-3">
+            <Logo />
+            <div>
+              <h5 className="font-display text-xl font-semibold text-indigo-700">
+                Corazon Homes
+              </h5>
+              <p className="text-sm text-gray-500">
+                Find and Manage your rentals in one place
+              </p>
+            </div>
           </div>
         </header>
+
+        {/* Main Content */}
         <PrivacyComponent />
-        <footer className="p-4 shadow-sm md:px-6 md:py-8 bg-slate-300 mt-auto">
-          <div className="sm:flex sm:items-center sm:justify-between">
-            <div className="flex items-center mb-4 sm:mb-0">
+
+        {/* Footer */}
+        <footer className="bg-gray-900 text-gray-200 mt-auto px-6 py-8">
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center gap-4 mb-6 md:mb-0">
               <Logo />
-              <div className="flex flex-col ml-3 justify-center">
-                <h1 className="font-display text-xl md:text-2xl">
-                Corazon Homes
-                </h1>
-                <p className="text-xs md:text-sm">
+              <div>
+                <h1 className="text-lg font-bold">Corazon Homes</h1>
+                <p className="text-sm text-gray-400">
                   Find and Manage your rentals in one place
                 </p>
               </div>
             </div>
-            <ul className="flex flex-wrap items-center mb-6 text-sm sm:mb-0">
+            <ul className="flex space-x-6 text-sm">
               <li>
-                <Link to="/about" className="mr-4 hover:underline md:mr-6 ">
+                <Link to="/about" className="hover:underline">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="mr-4 hover:underline md:mr-6">
+                <Link to="/privacy" className="hover:underline">
                   Privacy Policy
                 </Link>
               </li>
             </ul>
           </div>
-          <hr className="my-6 border-gray-700 sm:mx-auto  lg:my-8" />
-          <span className="block text-sm  sm:text-center ">
-            2023 |{" "}
-            <Link to="/" className="hover:underline">
-              Property Plus
-            </Link>
-          </span>
+          <hr className="my-6 border-gray-700" />
+          <div className="text-center text-sm space-y-1">
+            <p>
+              © 2025{" "}
+              <Link to="/" className="hover:underline">
+                Property Plus
+              </Link>
+              . All Rights Reserved.
+            </p>
+          </div>
         </footer>
       </div>
     );
   }
+
   return (
-    <div>
+    <div className="min-h-screen flex flex-col bg-white">
       <Header />
       <PrivacyComponent />
       <Footer />
