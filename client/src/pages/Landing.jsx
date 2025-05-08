@@ -33,156 +33,119 @@ const Landing = () => {
   );
 
   return (
-    <div>
-      <header className="flex m-1 shadow-sm">
+    <div className="bg-gray-50 min-h-screen">
+      <header className="flex items-center px-6 py-4 shadow-sm bg-white">
         <Logo />
-        <div className="flex flex-col justify-center ml-2">
-          <h5 className="font-display">Corazon Homes</h5>
-          <p className="hidden text-xs md:block md:text-sm">
+        <div className="ml-3">
+          <h1 className="text-xl font-bold text-gray-800">Corazon Homes</h1>
+          <p className="text-sm text-gray-500">
             Trust · Transparency · Expertise
           </p>
         </div>
       </header>
 
-      <main className="flex flex-col items-center my-16">
-        <div className="md:w-2/3 text-center">
-          <h1 className="text-2xl md:text-4xl font-heading font-extrabold">
+      <main className="flex flex-col items-center px-6 py-12">
+        <section className="text-center max-w-2xl">
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-6">
             Your Trusted{" "}
-            <span className="text-primaryDark">Real Estate Advisor</span>
+            <span className="text-blue-600">Real Estate Advisor</span>
           </h1>
-          <p className="mt-8 text-gray-700 w-4/5 mx-auto">
-            Since 2013, Corazon Homes has guided buyers and sellers through every
-            step—from property search and valuation to loan assistance and
-            registration—backed by an exhaustive network of vetted professionals.
+          <p className="text-gray-600">
+            Since 2013, Corazon Homes has guided buyers and sellers through
+            every step—from property search and valuation to loan assistance and
+            registration—backed by an exhaustive network of vetted
+            professionals.
           </p>
-        </div>
+        </section>
 
-        <div className="flex mt-8 gap-8 flex-wrap w-2/3 justify-center">
+        <div className="flex flex-wrap justify-center gap-4 mt-8">
           <Button
             variant="contained"
-            sx={{
-              color: "white",
-              "&:hover": {
-                backgroundColor: "primary.dark",
-                opacity: [0.9, 0.8, 0.7],
-              },
-            }}
-            onClick={() => {
-              ref.current.scrollIntoView({ behavior: "smooth" });
-            }}
+            sx={{ color: "white" }}
+            onClick={() => ref.current.scrollIntoView({ behavior: "smooth" })}
           >
             Get Started
           </Button>
-          <Button
-            color="secondary"
-            variant="outlined"
-            onClick={useCallback(() => navigate("/about"), [navigate])}
-          >
+          <Button variant="outlined" onClick={() => navigate("/about")}>
             Learn More
           </Button>
         </div>
 
-        <div className="md:w-2/4">
+        <div className="max-w-xl mt-10">
           <img src={landingTitle} alt="Corazon Homes" className="w-full" />
         </div>
 
-        <main ref={ref} className="">
-          <section className="flex gap-16">
-            <img className="hidden md:block" src={landingImg2} alt="" />
-            <div className="flex flex-col self-center mx-auto p-4 w-full">
-              <h3 className="font-display mb-2">Are you a Property Owner?</h3>
-              <p>List your properties on our digital marketplace</p>
-              <p>Connect with qualified buyers and investors</p>
-              <p>Manage offers, contracts, and post-sale support</p>
-              <div className="flex justify-start mt-7">
+        <section ref={ref} className="mt-20 w-full max-w-6xl space-y-16">
+          {/* Owner Section */}
+          <div className="flex flex-col md:flex-row gap-8 items-center bg-white shadow p-6 rounded-xl">
+            <img
+              className="hidden md:block w-1/2"
+              src={landingImg2}
+              alt="Owner"
+            />
+            <div className="flex-1">
+              <h3 className="text-xl font-semibold mb-2">
+                Are you a Property Owner?
+              </h3>
+              <ul className="list-disc list-inside text-gray-600">
+                <li>List your properties on our digital marketplace</li>
+                <li>Connect with qualified buyers and investors</li>
+                <li>Manage offers, contracts, and post-sale support</li>
+              </ul>
+              <div className="flex gap-4 mt-6">
                 <Button
-                  onClick={useCallback(() => navigate("/login/owner"), [
-                    navigate,
-                  ])}
                   variant="contained"
-                  size="medium"
                   color="secondary"
-                  sx={{
-                    color: "white",
-                    "&:hover": {
-                      backgroundColor: "secondary.dark",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
+                  onClick={() => navigate("/login/owner")}
                 >
                   Login
                 </Button>
-                <span className="mx-3 sm:text-2xl">|</span>
                 <Button
-                  onClick={useCallback(() => navigate("/register/owner"), [
-                    navigate,
-                  ])}
                   variant="contained"
-                  size="medium"
                   color="primary"
-                  sx={{
-                    color: "white",
-                    "&:hover": {
-                      backgroundColor: "primary.dark",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
+                  onClick={() => navigate("/register/owner")}
                 >
                   Register
                 </Button>
               </div>
             </div>
-          </section>
+          </div>
 
-          <hr className="my-4" />
-
-          <section className="flex gap-16 mt-5">
-            <img className="hidden md:block" src={landingImg} alt="" />
-            <div className="flex flex-col self-center mx-auto p-4 w-full">
-              <h3 className="font-display mb-2">Are you a Home Buyer?</h3>
-              <p>Browse verified listings across India & UAE</p>
-              <p>Schedule site visits with ease</p>
-              <p>Get expert guidance on home loans and registration</p>
-              <div className="flex justify-start mt-7">
+          {/* Buyer Section */}
+          <div className="flex flex-col md:flex-row gap-8 items-center bg-white shadow p-6 rounded-xl">
+            <img
+              className="hidden md:block w-1/2"
+              src={landingImg}
+              alt="Buyer"
+            />
+            <div className="flex-1">
+              <h3 className="text-xl font-semibold mb-2">
+                Are you a Home Buyer?
+              </h3>
+              <ul className="list-disc list-inside text-gray-600">
+                <li>Browse verified listings across India & UAE</li>
+                <li>Schedule site visits with ease</li>
+                <li>Get expert guidance on home loans and registration</li>
+              </ul>
+              <div className="flex gap-4 mt-6">
                 <Button
-                  onClick={useCallback(() => navigate("/login/tenant"), [
-                    navigate,
-                  ])}
                   variant="contained"
-                  size="medium"
                   color="secondary"
-                  sx={{
-                    color: "white",
-                    "&:hover": {
-                      backgroundColor: "secondary.dark",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
+                  onClick={() => navigate("/login/tenant")}
                 >
                   Login
                 </Button>
-                <span className="mx-3 sm:text-2xl">|</span>
                 <Button
-                  onClick={useCallback(() => navigate("/register/tenant"), [
-                    navigate,
-                  ])}
                   variant="contained"
-                  size="medium"
-                  color="tertiary"
-                  sx={{
-                    color: "white",
-                    "&:hover": {
-                      backgroundColor: "tertiary.dark",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
+                  color="info"
+                  onClick={() => navigate("/register/tenant")}
                 >
                   Register
                 </Button>
               </div>
             </div>
-          </section>
-        </main>
+          </div>
+        </section>
       </main>
 
       <Footer />

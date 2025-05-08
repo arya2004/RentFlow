@@ -4,41 +4,59 @@ import { Link } from "react-router-dom";
 
 const AboutPageComponent = () => {
   return (
-    <div className="flex flex-col items-center mx-auto w-3/4 mb-12">
-      <h2 className="font-heading font-bold mt-8 uppercase">About</h2>
-      <div className="mt-6 space-y-6">
-        <p>
-          Corazon Homes is a real estate advisor that functions on the pillars of trust, transparency and expertise. As a digital marketplace with an exhaustive range of property listings, we guide home buyers from the very start of their search all the way through loan assistance and property registration.
+    <div className="w-full bg-gradient-to-br from-white via-slate-50 to-slate-100 py-12 px-4 md:px-20">
+      <h2 className="text-3xl font-extrabold text-center text-slate-800 uppercase mb-10 font-heading tracking-wide">
+        About Corazon Homes
+      </h2>
+
+      <div className="space-y-8 max-w-5xl mx-auto">
+        <p className="text-lg text-gray-700 text-center leading-relaxed">
+          Corazon Homes is a real estate advisor built on trust, transparency,
+          and expertise. As a digital marketplace with an exhaustive range of
+          property listings, we guide homebuyers from search to loan assistance
+          and registration.
         </p>
 
-        <p>
-          Founded in 2013, Corazon Homes has grown at a scorching pace, consolidating supply and demand to create significant barriers to entry through scale, sourcing capabilities, demand aggregation, and cutting-edge technology. Our accomplished team—ex-bankers and Ivy League alumni—ensure your search for a dream property ends here.
+        <p className="text-lg text-gray-700 text-center leading-relaxed">
+          Founded in 2013, Corazon Homes has grown rapidly, bridging the gap
+          between property supply and demand using technology and a seasoned
+          team of experts including ex-bankers and Ivy League alumni.
         </p>
 
-        <h4 className="font-bold">Consultation</h4>
-        <p>
-          We provide strategic advice at every stage of acquisition: sourcing and identification, valuation, negotiation, and due diligence. Our network of vetted professionals brings you the best support to secure the right property at the best price.
-        </p>
-
-        <h4 className="font-bold">After Sales</h4>
-        <p>
-          You’re not just a customer—you’re part of our family. Our after-sales team keeps you updated with progress reports and market insights, and resolves any query within 72 hours to ensure your complete satisfaction.
-        </p>
-
-        <h4 className="font-bold">Home Loans</h4>
-        <p>
-          We assist with home and commercial loan processes, ensuring you have the freedom to choose the best bank for your needs. As our client, you get full due diligence and multiple financing options.
-        </p>
-
-        <h4 className="font-bold">Property Management</h4>
-        <p>
-          From finance and legal procedures to beautification, interiors, leasing, and reselling, we handle it all so you can enjoy the final result without worry.
-        </p>
-
-        <h4 className="font-bold">NRI Corner</h4>
-        <p>
-          India is a land of opportunity for NRIs. Thanks to RERA Act 2016, buying property is now simpler and more transparent. We offer end-to-end support on site visits, home loans, and registrations to make your investment safe and profitable.
-        </p>
+        <div className="grid md:grid-cols-2 gap-8 mt-10">
+          {[
+            {
+              title: "Consultation",
+              desc: "Strategic advice at every acquisition stage—sourcing, valuation, negotiation, and due diligence with vetted professionals.",
+            },
+            {
+              title: "After Sales",
+              desc: "You’re part of our family. Enjoy progress updates, market insights, and query resolution within 72 hours.",
+            },
+            {
+              title: "Home Loans",
+              desc: "We help with home and commercial loan processes, giving you due diligence and access to multiple financing options.",
+            },
+            {
+              title: "Property Management",
+              desc: "From finance to beautification and reselling, we manage everything so you can enjoy a hassle-free property experience.",
+            },
+            {
+              title: "NRI Corner",
+              desc: "With the RERA Act 2016, buying in India is simpler for NRIs. We provide end-to-end support including loans and registrations.",
+            },
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition duration-200"
+            >
+              <h4 className="text-xl font-semibold text-indigo-700 mb-2">
+                {item.title}
+              </h4>
+              <p className="text-gray-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -49,15 +67,15 @@ const AboutPage = () => {
 
   if (!user) {
     return (
-      <div>
+      <div className="min-h-screen flex flex-col">
         {/* HEADER */}
-        <header className="flex m-1 shadow-sm items-center">
+        <header className="flex items-center shadow-sm p-4 bg-white">
           <Logo />
-          <div className="flex flex-col justify-center ml-2">
-            <h5 className="font-display">Corazon Homes</h5>
-            <p className="hidden text-xs md:block md:text-sm">
-              It’s great to be home!
-            </p>
+          <div className="ml-3">
+            <h5 className="font-display text-xl font-semibold">
+              Corazon Homes
+            </h5>
+            <p className="text-sm text-gray-500">It’s great to be home!</p>
           </div>
         </header>
 
@@ -65,40 +83,44 @@ const AboutPage = () => {
         <AboutPageComponent />
 
         {/* FOOTER */}
-        <footer className="p-4 shadow-sm md:px-6 md:py-8 bg-slate-300 mt-auto">
-          <div className="sm:flex sm:items-center sm:justify-between">
-            <div className="flex items-center mb-4 sm:mb-0">
+        <footer className="bg-slate-800 text-white p-6 md:px-20 md:py-10 mt-16">
+          <div className="flex flex-col md:flex-row md:justify-between items-center">
+            <div className="flex items-center gap-3 mb-6 md:mb-0">
               <Logo />
-              <div className="flex flex-col ml-3 justify-center">
-                <h1 className="font-display text-xl md:text-2xl">
-                  Corazon Homes
-                </h1>
-                <p className="text-xs md:text-sm">It’s great to be home!</p>
+              <div>
+                <h1 className="text-xl font-bold">Corazon Homes</h1>
+                <p className="text-sm">It’s great to be home!</p>
               </div>
             </div>
-            <ul className="flex flex-wrap items-center mb-6 text-sm sm:mb-0">
+
+            <ul className="flex gap-6 text-sm font-medium">
               <li>
-                <Link to="/about" className="mr-4 hover:underline md:mr-6">
+                <Link to="/about" className="hover:underline">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="mr-4 hover:underline md:mr-6">
+                <Link to="/privacy" className="hover:underline">
                   Privacy Policy
                 </Link>
               </li>
             </ul>
           </div>
-          <hr className="my-6 border-gray-700 sm:mx-auto lg:my-8" />
-          <div className="text-sm sm:text-center text-gray-800">
-            <p>Office No. 404, City Avenue, Near Hotel Sayaji, Wakad, Pune - 411057</p>
+
+          <hr className="my-6 border-gray-500" />
+
+          <div className="text-center text-sm">
+            <p>
+              Office No. 404, City Avenue, Near Hotel Sayaji, Wakad, Pune -
+              411057
+            </p>
             <p>Phone: +91-7276004884 | Email: sales@corazonhomes.com</p>
             <p className="mt-2">
               &copy; 2025{" "}
               <Link to="/" className="hover:underline">
                 Corazon Homes
-              </Link>{" "}
-              | All Rights Reserved
+              </Link>
+              . All Rights Reserved.
             </p>
           </div>
         </footer>
@@ -108,7 +130,7 @@ const AboutPage = () => {
 
   // Logged-in users
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <Header />
       <AboutPageComponent />
       <Footer />
